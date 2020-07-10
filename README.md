@@ -1,4 +1,4 @@
-## OpenCore configuration for an Asus Prime Z370-P motherboard and UHD 630 iGPU graphics
+## OpenCore EFI configurations for an Asus Prime Z370-P motherboard and UHD 630 iGPU graphics
 ### Hardware
 - **Motherboard:** ASUS Prime Z370-P Intel Socket LGA 1151
 - **CPU:** Intel i3-8100 Coffee Lake 8th Gen

@@ -17,5 +17,5 @@
         6 x USB 2.0 port(s) (2 at back panel, )
 
 ### Notes
-- Configuration works with 10.15.4, but results in black screen when using 10.15.5. If you want to upgrade beyond 10.15.4, you will need to modify the properties in:
+- Configuration works with 10.15.4, but results in black screen when using 10.15.5. If you want to upgrade beyond 10.15.4, you will need to modify the properties found in:
 *config.plist > Root > DeviceProperties > Add > PciRoot(0x0)/Pci(0x2,0x0)*. Either framebuffer patching or busID patching will likely fix this problem.

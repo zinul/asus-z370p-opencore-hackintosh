@@ -23,7 +23,7 @@ A common problem encountered is a purple/magenta hue in the display, which is ca
 3. Mount drive as writable by running in terminal: ```sudo mount -uw /```
 4. Run in terminal: ```killall Finder```
 5. Download [patch-edid.rb](https://gist.github.com/adaugherity/7435890) by adaugherity and in terminal run: ```ruby <path-to-patch-edid.rb>```
-6. Copy the generated folder "DisplayVendorID-****" into ```system -> Libary -> Displays -> Contents -> Resources -> Overrides``` and replace the existing folder (it would be wise to backup the original folder if you want to undo the changes later)
+6. Copy the generated folder "DisplayVendorID-****" into ```system -> Libary -> Displays -> Contents -> Resources -> Overrides``` replacing the existing folder (it would be wise to backup the original folder if you want to undo the changes later)
 7. Restart computer and there should be no magenta hue to the screen and in in ```System Preferences -> Display -> Color``` there should be a new color profile listed called "your-monitor-name> - forced RGB mode (EDID overide)"
 
 ### Notes

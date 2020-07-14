@@ -26,6 +26,9 @@ A common problem encountered is a purple/magenta hue in the display, which is ca
 6. Copy the generated folder "DisplayVendorID-****" into ```system -> Libary -> Displays -> Contents -> Resources -> Overrides``` replacing the existing folder (it would be wise to backup the original folder if you want to undo the changes later)
 7. Restart computer and there should be no magenta hue to the screen and in in ```System Preferences -> Display -> Color``` there should be a new color profile listed called "your-monitor-name> - forced RGB mode (EDID overide)"
 
-### Notes
-Configuration works with 10.15.4, but results in black screen when using 10.15.5. If you want to upgrade beyond 10.15.4, you will need to modify the properties found in:
+### System failing to wake
+An initial problem faced was the system being unresponsive after sleeping, forcing the user to restart the machine. This problem can be solved by adding the boot argument: ```igfxonln=1``` to: ```config.plist -> NVRAM -> Block -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args```
+
+### Black Screen in 10.15.4+
+Configuration works with 10.15.4, but results in black screen when using 10.15.5, I have yet to research further into finding a fix for this. If you want to upgrade beyond 10.15.4, a likely fix will be found by modifying the properties found in:
 ```config.plist -> Root > DeviceProperties -> Add -> PciRoot(0x0)/Pci(0x2,0x0)```. Either framebuffer patching or busID patching will likely fix this problem.

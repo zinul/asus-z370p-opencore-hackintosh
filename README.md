@@ -16,7 +16,7 @@
 - **USB:** 8 x USB 3.1 Gen 1 port(s) (4 at back panel, +blue)
         6 x USB 2.0 port(s) (2 at back panel, )
 
-### Forcing RGB mode
+### Forcing RGB mode (EDID override)
 A common problem encountered is a purple/magenta hue in the display, which is caused by Catalina thinking the monitor is a Television and sending out YPbPr signal instead of RGB, you can rectify this by following these steps and forcing RGB mode:
 1. Disabling SIP by changing ```config.plist -> NVRAM -> Block -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> csr-active-config from 00000000 to FF070000```
 2. Restarting the computer and clearing NVRAM to impliment the changes.

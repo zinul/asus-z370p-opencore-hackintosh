@@ -25,6 +25,7 @@ A common problem encountered is a purple/magenta hue in the display, which is ca
 5. Download [patch-edid.rb](https://gist.github.com/adaugherity/7435890) by adaugherity and in terminal run: ```ruby <path-to-patch-edid.rb>```
 6. Copy the generated folder "DisplayVendorID-****" into ```system -> Libary -> Displays -> Contents -> Resources -> Overrides``` replacing the existing folder (it would be wise to backup the original folder if you want to undo the changes later)
 7. Restart computer and there should be no magenta hue to the screen and in in ```System Preferences -> Display -> Color``` there should be a new color profile listed called "your-monitor-name> - forced RGB mode (EDID overide)"
+8. Re-enable SIP by changing ```config.plist -> NVRAM -> Block -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> csr-active-config back to 00000000```
 
 ### System failing to wake
 An initial problem faced was the system being unresponsive after sleeping, forcing the user to restart the machine. This problem can be solved by adding the boot argument: ```igfxonln=1``` to: ```config.plist -> NVRAM -> Block -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args```

@@ -28,7 +28,7 @@ A common problem encountered is a purple/magenta hue in the display, which is ca
 8. Re-enable SIP by changing ```config.plist -> NVRAM -> Block -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> csr-active-config back to 00000000```
 
 ### System failing to wake
-An initial problem faced was the system being unresponsive after sleeping, forcing the user to restart the machine. This problem can be solved by adding the boot argument: ```igfxonln=1``` to: ```config.plist -> NVRAM -> Block -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args```
+An initial problem faced was the system being unresponsive after sleeping, forcing the user to restart the machine. This problem can be solved by adding the boot argument: ```igfxonln=1``` in: ```config.plist -> NVRAM -> Block -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> boot-args```
 
 ### Black Screen in 10.15.4+
 Configuration works with 10.15.4, but results in black screen when using 10.15.5, I have yet to research further into finding a fix for this. If you want to upgrade beyond 10.15.4, a likely fix will be found by modifying the properties found in:
